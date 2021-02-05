@@ -1,3 +1,3 @@
-def info(){
-    println("Hello World")
+def call(message = "default"){
+    return message;
 }
