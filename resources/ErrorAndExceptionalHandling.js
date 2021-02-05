@@ -2,9 +2,11 @@ const splunkjs = require('splunk-sdk');
 
 function errorAndExceptionalHandlingCheck(artifact_info, start_time, end_time){
 
-  console.log(artifact_info)
+  console.log("Inside error"+artifact_info);
+  return "try again"
+}
 
-var service = new splunkjs.Service({username: "jaikarvir", password:"Flower$7"});
+/*var service = new splunkjs.Service({username: "jaikarvir", password:"Flower$7"});
 
 service.login(function(err,success){
     if(err){
@@ -54,6 +56,6 @@ return "Inside Error";
       
 })
 
-}
+}*/
 
 //errorAndExceptionalHandlingCheck("abc","","")
