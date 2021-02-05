@@ -3,13 +3,7 @@ const splunkjs = require('splunk-sdk');
 const artifact_info = `${process.argv[2]}`;
 
 function errorAndExceptionalHandlingCheck(artifact_info, start_time, end_time){
-
-  console.log("Inside error "+artifact_info);
-}
-
-return errorAndExceptionalHandlingCheck(artifact_info,"", "")
-
-/*var service = new splunkjs.Service({username: "jaikarvir", password:"Flower$7"});
+    var service = new splunkjs.Service({username: "jaikarvir", password:"Flower$7"});
 
 service.login(function(err,success){
     if(err){
@@ -18,7 +12,7 @@ service.login(function(err,success){
     console.log("login was successful"+success);
 
    // var searchQuery = "search * | head 100";
- /*   var searchQuery =  "search source=tutorialdata.zip:* host=vendor_sales VendorID=1132 | head 2";
+   var searchQuery =  "search source=tutorialdata.zip:* host=vendor_sales VendorID=1132 | head 2";
     //var searchQuery = "search categoryId=ARCADE|head 3";
 
     // Set the search parameters
@@ -55,10 +49,10 @@ service.search(
   }
 );
 
-return "Inside Error";
+return "check";
       
 })
 
-}*/
+}
 
-//errorAndExceptionalHandlingCheck("abc","","")
+return errorAndExceptionalHandlingCheck(artifact_info,"", "")
