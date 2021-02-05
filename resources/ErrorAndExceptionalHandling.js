@@ -5,7 +5,8 @@ console.log(artifact_info);
 
 function errorAndExceptionalHandlingCheck(artifact_info, start_time, end_time){
 
-  console.log("Inside error"+artifact_info);
+  const abc = `${process.argv[1]}`;
+  console.log("Inside error"+abc);
   return "try again"
 }
 
