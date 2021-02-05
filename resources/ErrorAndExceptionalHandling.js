@@ -1,10 +1,13 @@
 const splunkjs = require('splunk-sdk');
 
+const artifact_info = `${process.argv[1]}`
 function errorAndExceptionalHandlingCheck(artifact_info, start_time, end_time){
 
   console.log("Inside error"+artifact_info);
   return "try again"
 }
+
+errorAndExceptionalHandlingCheck(artifact_info,"", "")
 
 /*var service = new splunkjs.Service({username: "jaikarvir", password:"Flower$7"});
 
