@@ -3,9 +3,13 @@ const splunkjs = require('splunk-sdk');
 const artifact_info = `${process.argv[2]}`;
 const start_time = `${process.argv[3]}`;
 const  end_time = `${process.argv[4]}`;
+const  dod_config_file = `${process.argv[5]}`;
 
-function errorAndExceptionalHandlingCheck(artifact_info, start_time, end_time){
-    var service = new splunkjs.Service({username: "jaikarvir", password:"Flower$7"});
+function errorAndExceptionalHandlingCheck(artifact_info, start_time, end_time,dod_config_file){
+
+  console.log("DODConfig : "+dod_config_file);
+
+   /* var service = new splunkjs.Service({username: "jaikarvir", password:"Flower$7"});
 
 service.login(function(err,success){
     if(err){
@@ -53,8 +57,8 @@ service.search(
 
 return "check";
       
-})
+})*/
 
 }
 
-return errorAndExceptionalHandlingCheck(artifact_info,start_time, end_time)
+return errorAndExceptionalHandlingCheck(artifact_info,start_time, end_time,dod_config_file)
