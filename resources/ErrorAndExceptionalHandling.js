@@ -1,6 +1,8 @@
 const splunkjs = require('splunk-sdk');
 
 const artifact_info = `${process.argv[2]}`;
+const start_time = `${process.argv[3]}`;
+const  end_time = `${process.argv[4]}`;
 
 function errorAndExceptionalHandlingCheck(artifact_info, start_time, end_time){
     var service = new splunkjs.Service({username: "jaikarvir", password:"Flower$7"});
@@ -55,4 +57,4 @@ return "check";
 
 }
 
-return errorAndExceptionalHandlingCheck(artifact_info,"", "")
+return errorAndExceptionalHandlingCheck(artifact_info,start_time, end_time)
