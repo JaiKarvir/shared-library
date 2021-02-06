@@ -7,7 +7,8 @@ const  dod_config_file = `${process.argv[5]}`;
 
 function errorAndExceptionalHandlingCheck(artifact_info, start_time, end_time,dod_config_file){
 
-  console.log("DODConfig : "+dod_config_file);
+  const  abc = `${process.argv[5]}`;
+  console.log("DODConfig : "+abc);
 
    /* var service = new splunkjs.Service({username: "jaikarvir", password:"Flower$7"});
 
