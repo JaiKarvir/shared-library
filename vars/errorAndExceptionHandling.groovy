@@ -1,5 +1,6 @@
-def call(artifactName="abc", startTime="",endTime="", dodConfigFile = './DodConfig.yaml'){
+def call(def artifactName="abc", def startTime="",def endTime="", def dodConfigFile = "./DodConfig.yaml"){
 
+    println("Inside groovy: "+dodConfigFile);
     def errorAndExceptionHandling = libraryResource 'ErrorAndExceptionalHandling.js'
        writeFile file: "ErrorAndExceptionHandling.js", text: errorAndExceptionHandling  
     sh "npm install";
