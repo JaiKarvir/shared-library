@@ -1,4 +1,4 @@
-def call(def artifactName="abc", def startTime="",def endTime="", def dodConfigFile = "./DodConfig.yaml"){
+def call(def artifactName="abc", def startTime="",def endTime="", def dodConfigFile = "DodConfig.yaml"){
 
     println("Inside groovy: "+dodConfigFile);
     def errorAndExceptionHandling = libraryResource 'ErrorAndExceptionalHandling.js'
