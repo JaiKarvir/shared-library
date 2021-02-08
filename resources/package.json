@@ -4,6 +4,7 @@
   "description": "",
   "main": "ErrorAndExceptionalHandling.js",
   "dependencies": {
+    "js-yaml": "^4.0.0",
     "splunk-sdk": "^1.9.0"
   },
   "devDependencies": {},

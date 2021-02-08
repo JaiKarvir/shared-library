@@ -1,4 +1,6 @@
 const splunkjs = require('splunk-sdk');
+const fs = require('fs');
+const yaml = require('js-yaml');
 
 const artifact_info = `${process.argv[2]}`;
 const start_time = `${process.argv[3]}`;
@@ -7,8 +9,17 @@ const  dod_config_file = `${process.argv[5]}`;
 
 function errorAndExceptionalHandlingCheck(artifact_info, start_time, end_time,dod_config_file){
 
-  const  abc = `${process.argv[5]}`;
-  console.log("DODConfig : "+abc);
+  //const  abc = `${process.argv[5]}`;
+  //console.log("DODConfig : "+dod_config_file);
+  //fs.readFile('/Users/jaikarvir/Desktop/Jai/kpdod-codebase/kpdod-phase/DodConfig.yaml', 'utf8' , (err, data) => {
+    fs.readFile(dod_config_file, 'utf8' , (err, data) => {
+    if (err) {
+      console.error(err)
+      return
+    }
+    let errorPrefixs = yaml.loadAll(data);
+    console.log(errorPrefixs)
+  })
 
    /* var service = new splunkjs.Service({username: "jaikarvir", password:"Flower$7"});
 
@@ -63,3 +74,6 @@ return "check";
 }
 
 return errorAndExceptionalHandlingCheck(artifact_info,start_time, end_time,dod_config_file)
+
+//errorAndExceptionalHandlingCheck("jai","", "","")
+
