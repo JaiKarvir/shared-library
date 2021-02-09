@@ -12,8 +12,8 @@ function errorAndExceptionalHandlingCheck(artifact_info, start_time, end_time,do
   let errorQuery = "";
   let genericError  = ['Error','Exception'];
   console.log("DodConfigFile: "+dod_config_file)
-  /*fs.readFile('/Users/jaikarvir/Desktop/Jai/kpdod-codebase/kpdod-phase/DodConfig.yaml', 'utf8' , (err, data) => {
-    //fs.readFile(dod_config_file, 'utf8' , (err, data) => {
+  //fs.readFile('/Users/jaikarvir/Desktop/Jai/kpdod-codebase/kpdod-phase/DodConfig.yaml', 'utf8' , (err, data) => {
+  fs.readFile(dod_config_file, 'utf8' , (err, data) => {
     if (err) {
       console.error(err)
       return
@@ -62,7 +62,7 @@ service.search(
     });
   }
 );   
-})*/
+})
 
 
 
