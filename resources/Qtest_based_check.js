@@ -1,7 +1,7 @@
 const axios = require("axios");
-
+const bearer_token = `${process.argv[1]}`;
 async function qtest_handler(){
-    console.log("Inside js file")
+    console.log("Inside js file "+ bearer_token);
     const config = {
         headers: {
             "content-type": "application/json",

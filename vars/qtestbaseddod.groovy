@@ -4,6 +4,11 @@ def call(){
        writeFile file: "Qtest_based_check.js", text: qtest_based_check  
     sh "npm install";
     sh "npm install axios"
-    def result  = sh(returnStdout: true, script: "node Qtest_based_check.js").split("\r?\n")    
+    
+    def result
+    withCredentials([string(credentialsId: 'qtest-token-dod-check', variable: 'SECRET')]) { //set SECRET with the credential content
+                result= sh(returnStdout: true, script: "node Qtest_based_check.js ${qtest-token-dod-check}").split("\r?\n")    
+    }
+    //def result  = sh(returnStdout: true, script: "node Qtest_based_check.js").split("\r?\n")    
     println("result: " + result);
 }
