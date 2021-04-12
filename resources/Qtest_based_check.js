@@ -1,4 +1,4 @@
-function qtest_handler(){
+async function qtest_handler(){
     console.log("Inside js file")
     const config = {
         headers: {
