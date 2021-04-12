@@ -1,3 +1,5 @@
+const axios = require("axios");
+
 async function qtest_handler(){
     console.log("Inside js file")
     const config = {
