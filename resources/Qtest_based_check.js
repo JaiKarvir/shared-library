@@ -3,10 +3,17 @@ const bearer_token = `${process.argv[2]}`;
 
 async function qtest_handler(){
     console.log("Inside js file "+ bearer_token);
-    const config = {
+    /*const config = {
         headers: {
             "content-type": "application/json",
             Authorization: "bearer 4d3fd652-b13e-4152-bc60-7798dde69e75",
+        },
+    };*/
+
+    const config = {
+        headers: {
+            "content-type": "application/json",
+            Authorization: "bearer "+ bearer_token,
         },
     };
 
