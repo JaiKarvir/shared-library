@@ -5,6 +5,7 @@ async function readConfig(){
     console.log("Inside readConfig");
     try{
     let configFile = await getDodConfigFileDetails("./DodConfig");
+
     console.log(configFile);
     }catch(error){
         console.log(error);
@@ -12,7 +13,7 @@ async function readConfig(){
 }
 
 
-function getDodConfigFileDetails(filename) {
+function getDodConfigFileDetails1(filename) {
     return new Promise((resolve, reject) => {
 
         try{
@@ -39,9 +40,9 @@ function getDodConfigFileDetails(filename) {
     })
   }
 
-function getDodConfigFileDetails1(filename) {
+function getDodConfigFileDetails(filename) {
     return new Promise((resolve, reject) => {
-        fs.readFile(filename, 'utf8', (err, result) => {    
+        fs.readFileSync(filename, 'utf8', (err, result) => {    
             if (err) {
                 reject("Dod Config File not found");
             }
