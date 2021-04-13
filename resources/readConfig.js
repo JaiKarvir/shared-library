@@ -22,7 +22,7 @@ function getDodConfigFileDetails(filename) {
             if (result !== null) {
                 resolve(result);
             } else {
-                reject("Dod Config file is empty")
+                reject("Dod Config file is empty1")
             }
         } else {
             reject("Dod Config File is empty")
