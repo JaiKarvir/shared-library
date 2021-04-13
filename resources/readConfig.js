@@ -3,8 +3,12 @@ const yaml = require('js-yaml');
 
 async function readConfig(){
     console.log("Inside readConfig");
+    try{
     let configFile = await getDodConfigFileDetails("./DodConfig");
     console.log(configFile);
+    }catch(error){
+        console.log(error);
+    }
 }
 
 
